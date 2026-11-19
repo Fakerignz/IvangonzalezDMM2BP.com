@@ -158,13 +158,14 @@ body.menu-activo .menu {
 }
 
 .titulo {
-  display: inline-block;
+  display: block;
   color: var(--blanco);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding-bottom: 8px;
   border-bottom: 4px solid var(--rojo);
+  justify-self: center;
 }
 
 .texto-destacado {
@@ -287,6 +288,8 @@ body.menu-activo .menu {
   background-color: var(--rojo);
 }
 
+
+
 @media (min-width: 768px) {
   .imagen-banner {
     height: 60vh;
@@ -312,4 +315,94 @@ body.menu-activo .menu {
   .imagen-banner {
     height: 70vh;
   }
+}
+
+@media (max-width: 425px) {
+  .menu {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    z-index: 1030;
+  }
+
+  .menu .navbar-toggler {
+    display: none;
+  }
+
+  .menu .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu .navbar-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .menu .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .menu .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.2rem;
+    white-space: nowrap;
+  }
+
+
+  body {
+    padding-bottom: 65px;
+  }
+
+  .intro {
+   height: 100vh; 
+  }
+}
+
+@media (max-width:425px){
+  .bloque {
+    display: none;
+  } 
+}
+
+
+#accordionFlushExample .accordion-button {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d6d6d6;
+}
+
+#accordionFlushExample .accordion-button::after {
+  color: #222222
+}
+
+#accordionFlushExample .accordion-button:not(.collapsed)::after {
+  filter: invert(22%) sepia(86%) saturate(3874%) hue-rotate(348deg) brightness(82%) contrast(104%);
+}
+
+#accordionFlushExample .accordion-body p {
+  color: #d6d6d6;
+  line-height: 1.55;
+}
+
+.accordion-item {
+  background-color: #141414;
+}
+
+.accordion-button {
+  background-color: var(--rojo);
+  
 }
